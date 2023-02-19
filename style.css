@@ -92,7 +92,7 @@ body {
 }
 .features ul li:hover {
   color: #fff;
-  background: #ff5400;
+  opacity: 0.7;
 }
 .buttons button {
   border: none;
@@ -105,7 +105,7 @@ body {
   background: #ff5400;
 }
 .buttons button:hover {
-  background: #e03e15;
+  opacity: 0.8;
 }
 
 button.loading {

@@ -6,17 +6,34 @@ const quoteBtn = document.querySelector("button");
 const soundBtn = document.querySelector(".sound");
 const copyBtn = document.querySelector(".copy");
 const twitterBtn = document.querySelector(".twitter");
+const body = document.querySelector("body");
+// const buttons = document.querySelectorAll(".buttons .features ul li");
 
 const randomQuote = () => {
   quoteBtn.classList.add("loading");
+  quoteBtn.textContent = "Loading...";
   fetch("https://api.quotable.io/random")
     .then((res) => res.json())
     .then((result) => {
       quote.textContent = result.content;
       author.textContent = result.author;
-      quoteBtn.classList.remove("loading");
       quoteBtn.textContent = "New Quote";
+      quoteBtn.classList.remove("loading");
     });
+  let randomHexNum =
+    "#" +
+    Math.floor(Math.random() * 0xffffff)
+      .toString(16)
+      .padEnd(6, "0");
+  randomHexNum = randomHexNum.toUpperCase();
+  quoteBtn.style.background = `${randomHexNum}`;
+  body.style.backgroundColor = `${randomHexNum}`;
+  soundBtn.style.color = `${randomHexNum}`;
+  soundBtn.style.border = `2px solid ${randomHexNum}`;
+  copyBtn.style.color = `${randomHexNum}`;
+  copyBtn.style.border = `2px solid ${randomHexNum}`;
+  twitterBtn.style.color = `${randomHexNum}`;
+  twitterBtn.style.border = `2px solid ${randomHexNum}`;
 };
 
 quoteBtn.addEventListener("click", randomQuote);
