@@ -62,3 +62,48 @@ body {
   margin: -7px 5px 0 0;
   font-family: monospace;
 }
+
+.container .buttons {
+  border-top: 1px solid #ccc;
+}
+
+.buttons .features {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.features ul {
+  display: flex;
+}
+.features ul li {
+  list-style: none;
+  margin: 0 5px;
+  height: 47px;
+  width: 47px;
+  color: #ff5400;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ff5400;
+  transition: all 0.3s ease;
+}
+.features ul li:hover {
+  color: #fff;
+  background: #ff5400;
+}
+.buttons button {
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 13px 12px;
+  border-radius: 30px;
+  background: #ff5400;
+}
+.buttons button:hover {
+  background: #e03e15;
+}
