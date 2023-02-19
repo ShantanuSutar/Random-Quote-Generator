@@ -12,7 +12,6 @@ const randomQuote = () => {
   fetch("https://api.quotable.io/random")
     .then((res) => res.json())
     .then((result) => {
-      console.log(result);
       quote.textContent = result.content;
       author.textContent = result.author;
       quoteBtn.classList.remove("loading");
@@ -27,4 +26,8 @@ soundBtn.addEventListener("click", () => {
     `${quote.textContent} by ${author.textContent}`
   );
   speechSynthesis.speak(utterance);
+});
+
+copyBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText(quote.textContent);
 });
