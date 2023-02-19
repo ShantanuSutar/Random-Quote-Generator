@@ -28,6 +28,7 @@ const randomQuote = () => {
   randomHexNum = randomHexNum.toUpperCase();
   quoteBtn.style.background = `${randomHexNum}`;
   body.style.backgroundColor = `${randomHexNum}`;
+  //   body.style.color = `${randomHexNum}`;  --- To change the text to random color
   soundBtn.style.color = `${randomHexNum}`;
   soundBtn.style.border = `2px solid ${randomHexNum}`;
   copyBtn.style.color = `${randomHexNum}`;
