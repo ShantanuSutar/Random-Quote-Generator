@@ -31,3 +31,8 @@ soundBtn.addEventListener("click", () => {
 copyBtn.addEventListener("click", () => {
   navigator.clipboard.writeText(quote.textContent);
 });
+
+twitterBtn.addEventListener("click", () => {
+  let tweetUrl = `https://twitter.com/intent/tweet?url= ${quote.textContent}`;
+  window.open(tweetUrl, "_blank");
+});
