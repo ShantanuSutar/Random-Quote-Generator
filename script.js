@@ -1,6 +1,7 @@
 "use strict";
 
 const quote = document.querySelector(".quote");
+const author = document.querySelector(".author .name");
 const quoteBtn = document.querySelector("button");
 
 const randomQuote = () => {
@@ -8,6 +9,8 @@ const randomQuote = () => {
     .then((res) => res.json())
     .then((result) => {
       console.log(result);
+      quote.textContent = result.content;
+      author.textContent = result.author;
     });
 };
 
